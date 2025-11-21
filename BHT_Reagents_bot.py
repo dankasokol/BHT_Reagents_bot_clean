@@ -4,9 +4,10 @@ from inventory import search_reagents, format_reagent
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import MessageHandler, filters
 
+import os
 
+TOKEN = os.getenv("BOT_TOKEN")
 
-TOKEN = "8570574838:AAGC0ycIvYNOUC0OmsA70LL64K0uDrI-nWA"
 MAIN_KEYBOARD = ReplyKeyboardMarkup(
     [
         [KeyboardButton("🔍 Найти реагент")],
@@ -18,7 +19,7 @@ MAIN_KEYBOARD = ReplyKeyboardMarkup(
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "Привет! Я бот-склад лаборатории 🧪\nВыбери действие на клавиатуре:",
+        "Привет! Я бот-склад БХТ! Подчиняюсь вам и Наталии Вадимовне! 🧪\nВыбери действие на клавиатуре:",
         reply_markup=MAIN_KEYBOARD
     )
 

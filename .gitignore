@@ -1,0 +1,13 @@
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Кэш Python
+__pycache__/
+
+# PyCharm
+.idea/
+
+# macOS мусор
+.DS_Store
